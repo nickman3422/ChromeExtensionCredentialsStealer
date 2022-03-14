@@ -69,12 +69,6 @@ chrome.webRequest.onBeforeRequest.addListener(
             console.log(themes);
             found=true;
         }
-        if(details.url.includes("foxnews")){
-            if (sent == false) {
-                sent = true;
-                postData()
-            }
-        }
       
         if(found == true){
             if (themes.includes(addition) == false) {
